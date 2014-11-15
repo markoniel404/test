@@ -33,11 +33,8 @@ app.tpl = {
         }
     ];
     app.tpl.loadTemplates(temps, function() {
-        console.log(app.tpl.get('main'));
-        // do nothing for now...
-
         $('#blackjack .game').prepend('<div class="container" id="inject-container"></div>');
-        $('#inject-container').html("Hello, World!");
-    })
+        $('#inject-container').html(app.tpl.get('main'));
+    });
 })();
 
